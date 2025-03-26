@@ -1,0 +1,131 @@
+.user-profile {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.user-profile h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-profile p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.user-profile p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.loading-message,
+.no-user-message {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Verified status styling */
+.verified-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+  background-color: #28a745; /* Green for verified */
+}
+
+.verified-status.not-verified {
+  background-color: #dc3545; /* Red for not verified */
+}
+
+/* Document status styling */
+.document-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+}
+
+.document-status.verified {
+  background-color: #28a745; /* Green for verified */
+}
+
+.document-status.pending {
+  background-color: #ffc107; /* Yellow for pending */
+}
+
+/* Upload button styling */
+.upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-profile {
+    padding: 1.5rem;
+  }
+
+  .user-profile h2 {
+    font-size: 1.8rem;
+  }
+
+  .user-profile p {
+    font-size: 1rem;
+  }
+
+  .user-profile img {
+    width: 100px;
+    height: 100px;
+  }
+}
