@@ -87,6 +87,7 @@ async getTransactions(req, res) {
     }
   },
 
+
   async getAllTransactions(req, res) {
     try {
       const transactions = await Transaction.find()
@@ -102,6 +103,9 @@ async getTransactions(req, res) {
       res.status(500).json({ message: "Server error" });
     }
   }
+  
+  
+  
 
 };
 
