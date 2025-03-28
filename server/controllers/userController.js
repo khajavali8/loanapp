@@ -57,7 +57,7 @@ const userController = {
       user.isVerified = true;
       await user.save();
 
-      console.log("📧 Sending verification email to:", user.email);
+      console.log("Sending verification email to:", user.email);
       await sendEmail(
         user.email,
         "Farm IT - Account Verified",
@@ -82,9 +82,9 @@ const userController = {
           .populate({
             path: 'farm',
             select: 'name location farmer',
-            populate: { path: 'farmer', select: 'firstName lastName email' } //  Populate farmer details
+            populate: { path: 'farmer', select: 'firstName lastName email' } 
           })
-          .populate('investors.investor', 'firstName lastName email'); //  Populate investor details
+          .populate('investors.investor', 'firstName lastName email'); 
     
         res.status(200).json(loans);
       } catch (error) {
@@ -120,7 +120,7 @@ const userController = {
 async getAllUserDocuments(req, res) {
   try {
     const documents = await Document.find()
-      .populate('owner', 'firstName lastName email') // Populate owner details
+      .populate('owner', 'firstName lastName email')
       .populate('relatedTo.id') // Optionally populate related entities (Farm, Loan, User)
       .select('title type filePath owner isVerified');
 

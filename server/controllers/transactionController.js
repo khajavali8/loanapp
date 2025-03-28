@@ -10,8 +10,8 @@ async getTransactions(req, res) {
       const transactions = await Transaction.find({
         $or: [{ from: userId }, { to: userId }] // Include investments and repayments
       })
-        .populate("from", "firstName lastName email") // Populate sender (investor)
-        .populate("to", "firstName lastName email") // Populate receiver (farmer)
+        .populate("from", "firstName lastName email") 
+        .populate("to", "firstName lastName email") 
         .populate("farmId", "name location") // Populate farm details
         .populate("loan", "amount interestRate duration status") // Populate loan details
         .sort({ createdAt: -1 }); // Sort by newest transactions first
@@ -87,7 +87,6 @@ async getTransactions(req, res) {
     }
   },
 
-
   async getAllTransactions(req, res) {
     try {
       const transactions = await Transaction.find()
@@ -103,9 +102,6 @@ async getTransactions(req, res) {
       res.status(500).json({ message: "Server error" });
     }
   }
-  
-  
-  
 
 };
 
