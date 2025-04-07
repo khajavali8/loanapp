@@ -167,7 +167,7 @@ const styles = {
   paid: {
     color: "#28a745", 
     fontWeight: "bold",
-  },
+  }
 };
 
 export default AllLoans;
